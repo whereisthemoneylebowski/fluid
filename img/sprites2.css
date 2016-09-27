@@ -1,0 +1,22 @@
+.user, .users1, .users2{
+	background: url(sprites.png) no-repeat;
+}
+
+.user{
+	background-position: -200px 0;
+	width: 64px;
+	height: 64px;
+}
+
+.users1{
+	background-position: -100px 0;
+	width: 64px;
+	height: 64px;
+}
+
+.users2{
+	background-position: 0 0;
+	width: 64px;
+	height: 64px;
+}
+

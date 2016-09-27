@@ -1,0 +1,22 @@
+.fish, .tortoise, .user{
+	background: url(sprites.png) no-repeat;
+}
+
+.fish{
+	background-position: 0 0;
+	width: 64px;
+	height: 64px;
+}
+
+.tortoise{
+	background-position: -100px 0;
+	width: 64px;
+	height: 64px;
+}
+
+.user{
+	background-position: -200px 0;
+	width: 64px;
+	height: 64px;
+}
+

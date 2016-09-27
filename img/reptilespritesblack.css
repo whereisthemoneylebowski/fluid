@@ -1,0 +1,22 @@
+.turtle-head, .crocodile-head, .snake-head{
+	background: url(sprites.png) no-repeat;
+}
+
+.turtle-head{
+	background-position: 0 0;
+	width: 64px;
+	height: 64px;
+}
+
+.crocodile-head{
+	background-position: -100px 0;
+	width: 64px;
+	height: 64px;
+}
+
+.snake-head{
+	background-position: -200px 0;
+	width: 64px;
+	height: 64px;
+}
+
