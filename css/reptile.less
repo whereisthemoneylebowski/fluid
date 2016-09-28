@@ -1,3 +1,8 @@
+/*Шрифты*/
+@font-face {
+	src: url('../fonts/PT_Sans-Web-Regular.ttf');
+}
+
 /*Less - переменные и примеси, анимация*/
 
 @white-color: rgb(255, 255, 255);
@@ -6,9 +11,10 @@
 @lightgray-color: rgb(200, 200, 200);
 @lightblue-color: rgb(100, 225, 255);
 @purple-color: rgb(81, 69, 163);
-@red-color: rgb(232, 0, 0);
+@lightpurple-color: rgb(84, 89, 148);
+@red-color: rgb(212, 106, 106);
 @slashy-color: rgb(81, 81, 255);
-@gold-color: rgb(212, 207, 106);
+@gold-color: rgb(220, 207, 106);
 @font-color: rgb(43, 43, 43);
 
 @font-family: 'PT Sans', 'Arial', sans-serif;
@@ -121,7 +127,7 @@ header {
 	width: 100%;
 	padding-left: 2%;
 	padding-right: 2%; 
-	background-color: @slashy-color;
+	background-color: darken(@lightgray-color, 35%);
 	box-sizing: border-box;
 }
 
@@ -141,25 +147,8 @@ header {
 	border-right: 3px solid transparent;
 	border-left: 3px solid transparent;
 
-	transition: background-color 0.5s;
-}
-
-.panel-navigation .logo {
-	flex-grow: 1;
-	display: block;
-	padding: 10px 0;
-
-	background:
-		radial-gradient(circle at 0% 50%, rgba(81, 69, 163, 0) 9px, #241f49 10px, rgba(81, 69, 163, 0) 11px) 0px 10px,
-		radial-gradient(at 100% 100%,      rgba(81, 69, 163, 0) 9px, #241f49 10px, rgba(81, 69, 163, 0) 11px),
-		#241f49;
-	background-size: 20px 20px;
-	background-color: @purple-color;
-}
-
-.panel-navigation .logo img {
-	display: inline-block;
-	border-radius: 50%;
+	-webkit-transition: background-color 0.5s;
+	-moz-transition: background-color 0.5s;
 }
 
 .panel-navigation a:hover {
@@ -170,12 +159,35 @@ header {
 	background-color: darken(@lightgreen-color, 20%); 
 }
 
+.panel-navigation .logo {
+	flex-grow: 1;
+
+	display: block;
+	position: relative;
+	padding: 10px 0;
+
+	background-color: lighten(@black-color, 20%);
+
+	-webkit-transition: 0.4s ease-in;
+	-moz-transition: 0.4s ease-in;
+}
+
 .panel-navigation .logo:hover {
-	background-color: darken(@purple-color, 10%);
+	background-color: lighten(@black-color, 15%);
 }
 
 .panel-navigation .logo:active {
-	background-color: darken(@purple-color, 20%);
+	background-color: lighten(@black-color, 10%);
+}
+
+
+.panel-navigation .logo img {
+	display: inline-block;
+	border-radius: 50%;
+}
+
+.panel-navigation .logo img:nth-of-type(2) {
+	display: none;
 }
 
 .panel-navigation .submenu {
@@ -226,6 +238,8 @@ main h1 {
 	text-align: center;
 	color: darken(@gold-color, 45%);
 	border-bottom: 2px solid darken(@gold-color, 25%);
+	box-shadow: 0 15px 15px -10px rgba(0,0,0,.5);
+
 	box-sizing: border-box;
 }
 
@@ -242,7 +256,8 @@ main a {
 	color: darken(@gold-color, 25%);
 	text-decoration: none;
 	
-	transition: color 0.3s;
+	-webkit-transition: color 0.3s;
+	-moz-transition: color 0.3s;
 }
 
 main a:hover {
@@ -287,7 +302,8 @@ main a.pressbutton {
 	margin-left: auto;
 	padding: 1em;
 
-	transition: 0.4s;
+	-webkit-transition: 0.4s;
+	-moz-transition: 0.4s;
 }
 
 main a.pressbutton:hover {
@@ -308,7 +324,7 @@ footer {
 
 	color: @white-color;
 	font-size: 1rem;
-	background-color: @slashy-color;
+	background-color: darken(@gold-color, 35%);
 	box-sizing: border-box;
 }
 
@@ -320,7 +336,7 @@ footer {
 	min-height: 30%;
 	padding: 1.5% 3%;
 	border-bottom: 2% solid @white-color;
-	background-color: @purple-color;
+	background-color: darken(@gold-color, 55%);
 	box-sizing: border-box;
 }
 
@@ -364,12 +380,7 @@ footer {
 	width: 100%;
 	min-height: 70%;
 	padding: 1.5% 3%;
-	background:
-		radial-gradient(circle at 0% 50%, rgba(81, 69, 163, 0) 9px, #241f49 10px, rgba(81, 69, 163, 0) 11px) 0px 10px,
-		radial-gradient(at 100% 100%,      rgba(81, 69, 163, 0) 9px, #241f49 10px, rgba(81, 69, 163, 0) 11px),
-		#241f49;
-	background-size: 20px 20px;
-	background-color: darken(@purple-color, 20%);
+	background-color: darken(@gold-color, 60%);
 	box-sizing: border-box;
 }
 
@@ -401,7 +412,8 @@ footer {
 	color: @white-color;
 	text-decoration: none;
 	
-	transition: color 0.3s;
+	-webkit-transition: color 0.3s;
+	-moz-transition: color 0.3s;
 }
 
 .footer-references a:hover {
@@ -431,7 +443,8 @@ footer {
 	vertical-align: top;
 	border-radius: 50%;
 	
-	transition: background-color 0.5s;
+	-webkit-transition: background-color 0.3s ease-in;
+	-moz-transition: background-color 0.3s ease-in;
 }
 
 .social-icon-fish,
@@ -439,7 +452,8 @@ footer {
 .social-icon-girl {
 	background: url('../img/reptilespriteswhite.png') no-repeat;
 
-	transition: 0.5s;
+	-webkit-transition: 0.3s;
+	-moz-transition: 0.5s;
 }
 
 .social-icon-fish {
@@ -528,7 +542,8 @@ main .hidetextbutton {
 		position: relative;
 		flex-grow: 0.5;
 
-		transition: background-color 0.4s;
+		-webkit-transition: background-color 0.4s;
+		-moz-transition: background-color 0.4s;
 	}
 
 	.submenu .icon-dropdown {
@@ -539,7 +554,8 @@ main .hidetextbutton {
 		height: 5%;
 		background-color: @white-color;
 
-		transition: background-color 0.4s;
+		-webkit-transition: background-color 0.4s;
+		-moz-transition: background-color 0.4s;
 	}
   
 	.submenu .icon-dropdown::before,
